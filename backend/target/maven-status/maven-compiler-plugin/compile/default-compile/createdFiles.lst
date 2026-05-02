@@ -54,7 +54,6 @@ com\healthcare\billing\enums\InvoiceItemType.class
 com\healthcare\patient\dto\PatientRequest.class
 com\healthcare\billing\dto\InvoiceRequest.class
 com\healthcare\billing\exception\DuplicateInvoiceException.class
-com\healthcare\patient\controller\PatientController.class
 com\healthcare\auth\dto\LoginResponse.class
 com\healthcare\appointment\dto\AppointmentRequest.class
 com\healthcare\auth\security\JwtFilter.class
@@ -115,6 +114,7 @@ com\healthcare\inventory\exception\BatchNotFoundException.class
 com\healthcare\appointment\exception\GlobalExceptionHandler$ValidationErrorResponse.class
 com\healthcare\appointment\exception\AppointmentNotFoundException.class
 com\healthcare\doctor\mapper\DoctorMapper.class
+com\healthcare\patient\controler\PatientController.class
 com\healthcare\auth\dto\RegisterRequest$RegisterRequestBuilder.class
 com\healthcare\doctor\controller\DoctorController.class
 com\healthcare\appointment\exception\InvalidStatusTransitionException.class
