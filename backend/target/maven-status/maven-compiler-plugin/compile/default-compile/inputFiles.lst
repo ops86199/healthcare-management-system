@@ -73,7 +73,7 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\d
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\exception\GlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\exception\InvalidScheduleException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\mapper\DoctorMapper.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\repository\Doctorrepository .java
+C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\repository\Doctorrepository.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\service\DoctorService.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\service\DoctorServiceImpl.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\HealthcareApplication.java
