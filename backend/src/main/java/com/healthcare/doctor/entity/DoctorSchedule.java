@@ -1,9 +1,9 @@
-package com.healthcare.doctor.entity;   
+package com.healthcare.doctor.entity;
 
-import com.healthcare.doctor.entity.Doctor;
+import jakarta.persistence.*;
+import java.time.DayOfWeek;
 import java.time.LocalTime;
 import java.util.UUID;
-
 @Entity
 @Table(name = "doctor_schedules",
        uniqueConstraints = @UniqueConstraint(
