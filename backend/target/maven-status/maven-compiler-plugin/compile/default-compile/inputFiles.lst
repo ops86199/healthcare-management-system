@@ -10,9 +10,9 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\a
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\entity\VitalSign.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\enums\AppointmentStatus.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\enums\AppointmentType.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\AppGlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\AppointmentConflictException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\AppointmentNotFoundException.java
+C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\GlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\InvalidStatusTransitionException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\VitalSignAlreadyExistsException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\mapper\AppointmentMapper.java
