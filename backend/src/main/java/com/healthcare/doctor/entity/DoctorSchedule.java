@@ -1,7 +1,7 @@
 package com.healthcare.doctor.entity;
 
 import jakarta.persistence.*;
-import java.time.DayOfWeek;
+import com.healthcare.doctor.enums.DayOfWeek;
 import java.time.LocalTime;
 import java.util.UUID;
 @Entity
