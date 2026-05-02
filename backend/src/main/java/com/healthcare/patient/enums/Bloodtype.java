@@ -1,6 +1,6 @@
 package com.healthcare.patient.enums;
 
-public enum Bloodtype {
+public enum BloodType {
     A_POSITIVE("A+"), A_NEGATIVE("A-"),
     B_POSITIVE("B+"), B_NEGATIVE("B-"),
     AB_POSITIVE("AB+"), AB_NEGATIVE("AB-"),
