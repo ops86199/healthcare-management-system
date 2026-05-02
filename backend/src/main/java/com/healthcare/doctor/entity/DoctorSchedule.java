@@ -1,8 +1,6 @@
-package com.healthcare.doctor.service;
+package com.healthcare.doctor.entity;   
 
-import com.healthcare.doctor.enums.DayOfWeek;
-import jakarta.persistence.*;
-
+import com.healthcare.doctor.entity.Doctor;
 import java.time.LocalTime;
 import java.util.UUID;
 
