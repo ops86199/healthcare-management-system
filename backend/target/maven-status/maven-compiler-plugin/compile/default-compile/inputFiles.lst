@@ -10,9 +10,9 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\a
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\entity\VitalSign.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\enums\AppointmentStatus.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\enums\AppointmentType.java
+C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\AppoGlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\AppointmentConflictException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\AppointmentNotFoundException.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\GlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\InvalidStatusTransitionException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\exception\VitalSignAlreadyExistsException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\appointment\mapper\AppointmentMapper.java
@@ -48,8 +48,8 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\b
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\enums\InvoiceItemType.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\enums\InvoiceStatus.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\enums\PaymentMethod.java
+C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\BillGlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\DuplicateInvoiceException.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\GlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\InvalidInvoiceStatusException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\InvoiceItemNotFoundException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\InvoiceNotFoundException.java
