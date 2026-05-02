@@ -1,7 +1,6 @@
 package com.healthcare.doctor.repository;
 
 import com.healthcare.doctor.entity.DoctorSchedule;
-import java.time.DayOfWeek;
 import com.healthcare.doctor.enums.DayOfWeek;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
