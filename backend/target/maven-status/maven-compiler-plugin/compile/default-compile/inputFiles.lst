@@ -25,7 +25,6 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\a
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\auth\dto\LoginResponse.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\auth\dto\RegisterRequest.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\auth\entity\User.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\auth\exception\AuthGlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\auth\exception\InvalidCredentialsException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\auth\exception\UserNotFoundException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\auth\repository\UserRepository.java
@@ -48,7 +47,6 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\b
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\enums\InvoiceItemType.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\enums\InvoiceStatus.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\enums\PaymentMethod.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\BillGlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\DuplicateInvoiceException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\InvalidInvoiceStatusException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\exception\InvoiceItemNotFoundException.java
@@ -58,6 +56,7 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\b
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\repository\InvoiceRepository.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\service\InvoiceService.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\billing\service\InvoiceServiceImpl.java
+C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\common\exception\GlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\controller\DoctorController.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\dto\AvailabilityUpdateRequest.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\dto\DoctorRequest.java
@@ -70,7 +69,6 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\d
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\enums\DayOfWeek.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\exception\DoctorNotFoundException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\exception\DuplicateFieldException.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\exception\GlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\exception\InvalidScheduleException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\mapper\DoctorMapper.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\doctor\repository\DoctorRepository.java
@@ -96,7 +94,6 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\i
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\exception\DuplicateBatchException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\exception\DuplicateMedicineException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\exception\ExpiredBatchOperationException.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\exception\GlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\exception\InsufficientStockException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\exception\MedicineNotFoundException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\mapper\InventoryMapper.java
@@ -112,7 +109,6 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\p
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\enums\BloodType.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\enums\Gender.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\exception\DuplicateFieldException.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\exception\GlobalExceptionHandler.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\exception\PatientNotFoundException.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\mapper\PatientMapper.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\repository\PatientRepository.java
