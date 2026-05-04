@@ -1,4 +1,4 @@
-package com.healthcare.patient.controler;
+package com.healthcare.patient.controller;
 
 import com.healthcare.patient.dto.PatientRequest;
 import com.healthcare.patient.dto.PatientResponse;
