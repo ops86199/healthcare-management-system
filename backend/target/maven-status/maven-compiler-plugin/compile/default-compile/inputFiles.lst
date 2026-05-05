@@ -102,7 +102,7 @@ C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\i
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\repository\MedicineRepository.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\service\InventoryService.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\inventory\service\InventoryServiceImpl.java
-C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\controler\PatientController.java
+C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\controller\PatientController.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\dto\PatientRequest.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\dto\PatientResponse.java
 C:\Users\SSD\healthcare-management-system\backend\src\main\java\com\healthcare\patient\entity\Patient.java

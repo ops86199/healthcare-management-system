@@ -49,7 +49,7 @@ public class SecurityConfig {
         http
             .csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers(PUBLIC_ENDPOINTS).permitAll()
+                .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
                 .requestMatchers("/api/v1/doctor/**").hasAnyRole("ADMIN", "DOCTOR")
                 .requestMatchers("/api/v1/pharmacy/**").hasAnyRole("ADMIN", "PHARMACIST")

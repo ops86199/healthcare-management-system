@@ -103,7 +103,6 @@ com\healthcare\appointment\dto\AppointmentSummaryResponse.class
 com\healthcare\inventory\exception\BatchNotFoundException.class
 com\healthcare\appointment\exception\AppointmentNotFoundException.class
 com\healthcare\doctor\mapper\DoctorMapper.class
-com\healthcare\patient\controler\PatientController.class
 com\healthcare\auth\dto\RegisterRequest$RegisterRequestBuilder.class
 com\healthcare\doctor\controller\DoctorController.class
 com\healthcare\appointment\exception\InvalidStatusTransitionException.class
