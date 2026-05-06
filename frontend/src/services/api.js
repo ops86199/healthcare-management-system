@@ -4,7 +4,7 @@
 
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = "http://localhost:8080/api/v1";
 
 // Axios instance shared by every request
 const api = axios.create({
