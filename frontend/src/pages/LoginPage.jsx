@@ -27,12 +27,11 @@ const LoginPage = () => {
 
     try {
       const response = await loginUser(form);
-
+      console.log("Full response:", response.data);
       // Adjust the key paths below to match your Spring Boot response shape.
       // Common patterns:  response.data.token  |  response.data.accessToken
       const token = response.data.token || response.data.accessToken;
-      const name  = response.data.name  || response.data.username || form.email;
-
+      const name  = response.data.name  || response.data.username || response.data.jwt;
       if (!token) throw new Error("Token not received from server.");
 
       localStorage.setItem("token", token);
