@@ -1,9 +1,16 @@
-FROM eclipse-temurin:21-jre-alpine
+FROM maven:3.9.6-eclipse-temurin-21-alpine AS builder
 
 WORKDIR /app
 
-COPY target/*.jar healthcare-app.jar
+COPY pom.xml .
 
-EXPOSE 8080
+RUN mvn dependency:go-offline -B
+
+COPY src ./src
+RUN mvn clean package -DskipTests
+FROM eclipse-temurin:21-jar-alpine
+COPY --from=builder /app/target/*.jar healthcare-app.jar
+
+EXPOSE 8081
 
 CMD ["java", "-jar", "healthcare-app.jar"]
