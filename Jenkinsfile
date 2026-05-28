@@ -49,24 +49,22 @@ Pipeline {
                 //Build backend image
                 dir('backend') {
                     sh "docker build -t $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG ."
+                    sh "docker run --name backend_container -d -p 8081:8080 $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG" 
                 }
                 //Build frontend image
                 dir('frontend') {
                     sh "docker build -t $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG ."
+                    sh "docker run --name frontend_container -d -p 3000:3000 $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG"
                 }
-                //Build db image
-                dir('db') {
-                    sh "docker build -t $AWS_ECR_REPOSITORY/$DB_IMAGE:$IMAGE_TAG ."
-                }
-
+            
             }
         }
         stage('Security Vulnerability Scan') {
             steps {
                 echo 'Running Trivy/SonarQube for scan to check for vulnerabilities...'
                 // Explain Trivy scan command
-                sh' "trivy image --severity HIGH,CRITICAL $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG"
-                sh' "trivy image --severity HIGH,CRITICAL $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG"
+                sh "trivy image --severity HIGH,CRITICAL $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG"
+                sh "trivy image --severity HIGH,CRITICAL $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG"
 
             }
         }
