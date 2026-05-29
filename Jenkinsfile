@@ -9,7 +9,7 @@ Pipeline {
         BACKEND_IMAGE = 'HealthCMS-backend-image'
         DB_IMAGE = 'HealthCMS-db-image'
         IMAGE_TAG = 'latest'
-        AWS-CREDENTIALS = credentials('aws-credentials-id') // Replace with your Jenkins credentials ID
+        AWS_CREDENTIALS = credentials('aws-credentials-id') // Replace with your Jenkins credentials ID
     }
     stages {
         stage('Checkout') {
