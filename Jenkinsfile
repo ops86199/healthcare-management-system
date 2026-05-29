@@ -94,15 +94,33 @@ pipeline {
         stage('deploy to k8s cluster') {
              steps {
                 withKubeConfig([credentialsId: 'kubeconfig-credentials-id']) {
-                   sh "kubectl apply -f frontend/deployment.yaml"
-                   sh "kubectl apply -f frontend/service.yaml"
-                    sh "kubectl apply -f backend/deployment.yaml"
-                    sh "kubectl apply -f backend/service.yaml"
-                    sh "kubectl apply -f db/deployment.yaml"
-                    sh "kubectl apply -f db/service.yaml"
+                   sh "kubectl apply -f k8s/frontend_deployment.yaml"
+                   sh "kubectl apply -f k8s/frontend_service.yaml"
+
+                   sh "kubectl apply -f k8s/backend_deployment.yaml"
+                   sh "kubectl apply -f k8s/backend_service.yaml"
+
+                   sh "kubectl apply -f k8s/db_deployment.yaml"
+                   sh "kubectl apply -f k8s/db_service.yaml"
 
                 }
             }
         }
+        // post {
+        //     success {
+        //         emailext(
+        //             to: "${env.RECIPIENT}",
+        //             subject: "Jenkins Job Success - Web01 ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+        //             body: "The Jenkins job has completed successfully."
+        //         )
+        //     }
+        //     failure {
+        //         emailext(
+        //             to: "${env.RECIPIENT}",
+        //             subject: "Jenkins Job Failure - Web01 ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+        //             body: "Build failed. Check console: ${env.BUILD_URL}console"
+        //         )
+        //     }
+        // }
     }
 }
