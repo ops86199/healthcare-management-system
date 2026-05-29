@@ -3,8 +3,8 @@ Pipeline {
     
     environment {
         // Define any environment variables here
-        AWS_ECR_REPOSITORY = 'your-ecr-repository'
-        AWS_REGION = 'your-aws-region'
+        AWS_ECR_REPOSITORY = 'healthcare_ms'
+        AWS_REGION = 'eu-north-1'
         FRONTEND_IMAGE = 'HealthCMS-frontend-image'
         BACKEND_IMAGE = 'HealthCMS-backend-image'
         DB_IMAGE = 'HealthCMS-db-image'
@@ -75,7 +75,7 @@ Pipeline {
                 sh 'aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ECR_REPOSITORY'
                 sh "docker push $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG"
                 sh "docker push $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG"
-                sh "docker push $AWS_ECR_REPOSITORY/$DB_IMAGE:$IMAGE_TAG"
+                
             }
         }
     }
