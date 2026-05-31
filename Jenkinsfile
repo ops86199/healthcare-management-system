@@ -36,6 +36,9 @@ pipeline {
                 dir('frontend') {
                     echo 'Building and testing frontend...'
                    // Add your frontend build and test commands here
+                   sh ' rm -rf node_modules'
+                   sh ' rm -f package-lock.json'
+
                    sh 'npm install -y'
                    sh 'npm run build'
                    sh 'npm test'
