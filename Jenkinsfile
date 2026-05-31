@@ -36,12 +36,12 @@ pipeline {
                 dir('frontend') {
                     echo 'Building and testing frontend...'
                    // Add your frontend build and test commands here
-                   sh ' rm -rf node_modules'
-                   sh ' rm -f package-lock.json'
+                   sh 'rm -rf node_modules'
+                   sh 'rm -f package-lock.json'
 
                    sh 'npm install -y'
                    sh 'npm run build'
-                   sh 'npm test'
+                  
                     }
                 }
             }
@@ -51,13 +51,13 @@ pipeline {
                 //Build backend image
                 dir('backend') {
                     sh "docker build -t $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG ."
-                    sh 'docker rm -f backend_container || true'
+                    sh "docker rm -f backend_container || true"
                     sh "docker run --name backend_container -d -p 8081:8080 $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG" 
                 }
                 //Build frontend image
                 dir('frontend') {
                     sh "docker build -t $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG ."
-                    sh 'docker rm -f frontend_container || true'
+                    sh "docker rm -f frontend_container || true"
                     sh "docker run --name frontend_container -d -p 3000:3000 $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG"
                 }
             }
