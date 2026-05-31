@@ -12,11 +12,11 @@ pipeline {
         AWS_CREDENTIALS = credentials('aws-credentials-id') // Replace with your Jenkins credentials ID
     }
     stages {
-        stage('Checkout') {
+        stage('Checkout Code') {
             steps {
                 echo 'Checking out source code from GitHub...'
                 // Add your SCM checkout commands here
-                checkout scmGit(branch: [[name: '*/main']], userRemoteConfig: [url: 'https://github.com/ops86199/healthcare-management-system'])
+                git url: 'https://github.com/ops86199/healthcare-management-system.git' branch: 'main'
             }
         }
     
