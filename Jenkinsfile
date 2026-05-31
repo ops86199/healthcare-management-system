@@ -4,10 +4,11 @@ pipeline {
     environment {
         // Define any environment variables here
         AWS_ECR_REPOSITORY = 'healthcare_ms'
+        AWS_ECR_REPOSITORY = 'fhealthc_ms'
         AWS_REGION = 'eu-north-1'
-        FRONTEND_IMAGE = 'HealthCMS-frontend-image'
-        BACKEND_IMAGE = 'HealthCMS-backend-image'
-        DB_IMAGE = 'HealthCMS-db-image'
+        FRONTEND_IMAGE = 'frontend-image'
+        BACKEND_IMAGE = 'backend-image'
+       // DB_IMAGE = ''
         IMAGE_TAG = 'latest'
         AWS_CREDENTIALS = credentials('aws-credentials-id') // Replace with your Jenkins credentials ID
     }
@@ -50,15 +51,16 @@ pipeline {
                 echo 'Building dockerimages for all 3 tayers...'
                 //Build backend image
                 dir('backend') {
-                    sh "docker build -t $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG ."
+         
+                    sh "docker build -t healthcare_ms/backend_image ."
                     sh "docker rm -f backend_container || true"
-                    sh "docker run --name backend_container -d -p 8081:8080 $AWS_ECR_REPOSITORY/$BACKEND_IMAGE:$IMAGE_TAG" 
+                    sh "docker run --name backend_container -d -p 8081:8081 healthcare_ms/backend_image:latest" 
                 }
                 //Build frontend image
                 dir('frontend') {
-                    sh "docker build -t $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG ."
+                    sh "docker build -t fhealthc_ms/frontend_image:latest ."
                     sh "docker rm -f frontend_container || true"
-                    sh "docker run --name frontend_container -d -p 3000:3000 $AWS_ECR_REPOSITORY/$FRONTEND_IMAGE:$IMAGE_TAG"
+                    sh "docker run --name frontend_container -d -p 3000:3000 fhealthc_ms/frontend_image:latest"
                 }
             }
         }
