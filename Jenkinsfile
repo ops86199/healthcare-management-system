@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Checking out source code from GitHub...'
                 // Add your SCM checkout commands here
-                git url: 'https://github.com/ops86199/healthcare-management-system.git' branch: 'main'
+                git url: 'https://github.com/ops86199/healthcare-management-system.git', branch: 'main'
             }
         }
     
