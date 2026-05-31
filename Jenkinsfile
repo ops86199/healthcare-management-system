@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Checking out source code from GitHub...'
                 // Add your SCM checkout commands here
-                checkout scmGit(branch: [[name: '*/main']], userRemoteConfig: [url: 'https://github.com/ops86199/healthcare-management-system.git'])
+                checkout scmGit(branch: [[name: '*/main']], userRemoteConfig: [url: 'https://github.com/ops86199/healthcare-management-system'])
             }
         }
     
