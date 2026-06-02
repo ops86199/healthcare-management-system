@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Build & Test Frontend') {
             steps {
-                dir('home/ubuntu/healthcare-management-system/frontend') {
+                dir('frontend') {
                     echo 'Building and testing frontend...'
                    // Add your frontend build and test commands here
                    sh 'rm -rf node_modules'
