@@ -3,11 +3,13 @@ pipeline {
     
     environment {
         // Define any environment variables here
-        AWS_ECR_REPOSITORY = 'healthcare_ms'
+        AWS_ECR_REPOSITORY = '629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms'
+        AWS_ECR_REPOSITORY = '629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthc_ms'
         AWS_REGION = 'eu-north-1'
         FRONTEND_IMAGE = 'healthsms-frontend-image'
         BACKEND_IMAGE = 'healthsms-backend-image'
         DB_IMAGE = 'healthsms-db-image'
+       // DB_IMAGE = ''
         IMAGE_TAG = 'latest'
         AWS_CREDENTIALS = credentials('aws-credentials-id') // Replace with your Jenkins credentials ID
     }
@@ -36,9 +38,11 @@ pipeline {
                 dir('home/ubuntu/healthcare-management-system/frontend') {
                     echo 'Building and testing frontend...'
                    // Add your frontend build and test commands here
-                   sh 'npm install'
+                   sh 'rm -rf node_modules'
+                   sh 'rm -f package-lock.json'
+
+                   sh 'npm install -y'
                    sh 'npm run build'
-                
                     }
                 }
             }
@@ -47,15 +51,15 @@ pipeline {
                 echo 'Building dockerimages for all 3 tayers...'
                 //Build backend image
                 dir('backend') {
-                    sh "docker build -t 629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms/backend_image:latest ."
+                    sh "docker build -t 629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms:latest ."
                     sh 'docker rm -f backend_container || true'
-                    sh "docker run --name backend_container -d -p 8081:8081 629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms/backend_image:latest " 
+                    sh "docker run --name backend_container -d -p 8081:8081 629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms:latest " 
                 }
                 //Build frontend image
                 dir('frontend') {
-                    sh "docker build -t 629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthcare_ms/frontend_image:latest ."
+                    sh "docker build -t 629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthcare_ms:latest ."
                     sh 'docker rm -f frontend_container || true'
-                    sh "docker run --name frontend_container -d -p 3000:3000 629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthc_ms/frontend_image:latest "
+                    sh "docker run --name frontend_container -d -p 3000:3000 629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthc_ms:latest "
                 }
             }
         }
@@ -64,10 +68,9 @@ pipeline {
             steps {
                 echo 'Pulling PostgreSQL image from Docker Hub...'
                    sh 'docker rm -f db_container || true'
-                   sh 'docker pull postgres:15'
+                   sh 'docker pul postgres:15'
                    sh """
-                      docker run --name db_container -d -p 5432:5432 -e POSTGRES_DB=healthcare_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres \
-                      postgres:15
+                      docker run --name db_container -d -p 5432:5432 -e POSTGRES_DB=healthcare_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres postgres:15
                       """
             }
         }   
@@ -85,8 +88,9 @@ pipeline {
             steps {
                 echo 'Pushing images to AWS ECR...'
                 // Add your AWS ECR login and push commands here
-                sh 'aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ECR_REPOSITORY'
+                sh "aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms "
                 sh "docker push 629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms:latest"
+		sh "aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthcare_ms "
                 sh "docker push 629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthcare_ms:latest"
 
             }
