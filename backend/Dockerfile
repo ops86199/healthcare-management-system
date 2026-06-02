@@ -8,7 +8,7 @@ RUN mvn dependency:go-offline -B
 
 COPY src ./src
 RUN mvn clean package -DskipTests
-FROM eclipse-temurin:21-jar-alpine
+FROM eclipse-temurin:21-jre-alpine
 COPY --from=builder /app/target/*.jar healthcare-app.jar
 
 EXPOSE 8081
