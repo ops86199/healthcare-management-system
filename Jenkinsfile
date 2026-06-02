@@ -3,8 +3,8 @@ pipeline {
     
     environment {
         // Define any environment variables here
-        AWS_ECR_REPOSITORY = '629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms'
-        AWS_ECR_REPOSITORY = '629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthc_ms'
+        1AWS_ECR_REPOSITORY = '629015358683.dkr.ecr.eu-north-1.amazonaws.com/healthcare_ms'
+        2AWS_ECR_REPOSITORY = '629015358683.dkr.ecr.eu-north-1.amazonaws.com/fhealthc_ms'
         AWS_REGION = 'eu-north-1'
         FRONTEND_IMAGE = 'healthsms-frontend-image'
         BACKEND_IMAGE = 'healthsms-backend-image'
